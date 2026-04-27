@@ -46,6 +46,15 @@
   "toolbar.history": "History",
   "toolbar.attachments": "Attachments",
 
+  "editor_settings.title": "Account Settings",
+  "editor_settings.current_password": "Current Password",
+  "editor_settings.new_password": "New Password",
+  "editor_settings.confirm_password": "Confirm Password",
+  "editor_settings.password_mismatch": "Passwords do not match",
+  "editor_settings.password_required": "New password is required",
+  "editor_settings.password_changed": "Password changed successfully",
+  "editor_settings.password_error": "Failed to change password",
+
   "settings.title": "Wiki Settings",
   "settings.general": "General",
   "settings.access": "Access",

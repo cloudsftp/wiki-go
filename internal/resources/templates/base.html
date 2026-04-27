@@ -122,6 +122,9 @@
     <!-- Include settings dialog template -->
     {{template "settings-dialog" .}}
 
+    <!-- Include editor settings dialog template -->
+    {{template "user-settings-dialog" .}}
+
     <!-- Include access rule dialog template -->
     {{template "access-rule-dialog" .}}
 
@@ -154,7 +157,7 @@
                         </button>
 
                         <!-- Admin-only buttons -->
-                        <button class="toolbar-button admin-only-button settings-button" title="{{t "common.settings"}}" {{if eq .UserRole "admin"}}style="display: inline-flex !important"{{else}}style="display: none !important"{{end}}>
+                        <button class="toolbar-button settings-button" title="{{t "common.settings"}}" {{if or (eq .UserRole "admin") (eq .UserRole "editor")}}style="display: inline-flex !important"{{else}}style="display: none !important"{{end}}>
                             <i class="fa fa-cog"></i>
                             <span class="button-text">{{t "common.settings"}}</span>
                         </button>
@@ -274,6 +277,7 @@
     <script src="/static/js/slugify.js?={{getVersion}}"></script>
     <script src="/static/js/document-management.js?={{getVersion}}"></script>
     <script src="/static/js/copy-button.js?={{getVersion}}"></script>
+    <script src="/static/js/editor-settings.js?={{getVersion}}"></script>
     <script src="/static/js/settings-manager.js?={{getVersion}}"></script>
     <script src="/static/js/keyboard-shortcuts.js?={{getVersion}}"></script>
     <script src="/static/js/edit-button.js?={{getVersion}}"></script>

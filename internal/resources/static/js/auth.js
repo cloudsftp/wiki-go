@@ -290,16 +290,22 @@
                     btn.style.cssText = 'display: inline-flex !important';
                 });
 
+                // Settings button is available for editors too
+                var settingsBtn = document.querySelector('.settings-button');
+                if (settingsBtn) settingsBtn.style.cssText = 'display: inline-flex !important';
+
                 // Special case for move/rename button (only show if not on homepage)
                 const renameBtn = document.querySelector('.move-document');
                 if (renameBtn && (window.location.pathname === '/' || window.location.pathname === '/homepage')) {
                     renameBtn.style.cssText = 'display: none !important';
                 }
             } else {
-                // Viewer user - hide admin and editor buttons
+                // Viewer user - hide admin, editor, and settings buttons
                 document.querySelectorAll('.admin-only-button, .editor-only-button').forEach(btn => {
                     btn.style.display = 'none';
                 });
+                var settingsBtn = document.querySelector('.settings-button');
+                if (settingsBtn) settingsBtn.style.display = 'none';
             }
 
             // Show logout button, hide login button for all authenticated users

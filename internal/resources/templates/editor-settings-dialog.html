@@ -1,0 +1,37 @@
+{{define "user-settings-dialog"}}
+<div class="user-settings-dialog" dir="auto">
+    <div class="dialog-container">
+        <button class="close-dialog" aria-label="Close account settings dialog">
+            <i class="fa fa-times"></i>
+        </button>
+        <h2 class="dialog-title">{{t "editor_settings.title"}}</h2>
+        <div class="error-message"></div>
+        <form id="editorSettingsForm">
+            <div class="form-group">
+                <label for="editorSettingsUsername">{{t "common.username"}}</label>
+                <input type="text" id="editorSettingsUsername" name="username" disabled>
+            </div>
+            <div class="form-group">
+                <label for="editorSettingsRole">{{t "users.role"}}</label>
+                <input type="text" id="editorSettingsRole" name="role" disabled>
+            </div>
+            <div class="form-group">
+                <label for="editorSettingsCurrentPassword">{{t "editor_settings.current_password"}}</label>
+                <input type="password" id="editorSettingsCurrentPassword" name="current_password" required>
+            </div>
+            <div class="form-group">
+                <label for="editorSettingsNewPassword">{{t "editor_settings.new_password"}}</label>
+                <input type="password" id="editorSettingsNewPassword" name="new_password" required>
+            </div>
+            <div class="form-group">
+                <label for="editorSettingsConfirmPassword">{{t "editor_settings.confirm_password"}}</label>
+                <input type="password" id="editorSettingsConfirmPassword" name="confirm_password" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="dialog-button primary">{{t "common.save"}}</button>
+                <button type="button" class="dialog-button cancel-editor-settings">{{t "common.cancel"}}</button>
+            </div>
+        </form>
+    </div>
+</div>
+{{end}}

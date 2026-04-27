@@ -16,6 +16,7 @@ body:has([class*="-dialog"].active) {
 .file-upload-dialog,
 .version-history-dialog,
 .settings-dialog,
+.user-settings-dialog,
 .add-column-dialog,
 .add-link-dialog,
 .access-rule-dialog {
@@ -45,6 +46,7 @@ body:has([class*="-dialog"].active) {
 .file-upload-dialog.active,
 .version-history-dialog.active,
 .settings-dialog.active,
+.user-settings-dialog.active,
 .add-column-dialog.active,
 .add-link-dialog.active,
 .access-rule-dialog.active {
